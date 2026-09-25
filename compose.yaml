@@ -1,0 +1,15 @@
+services:
+  finance:
+    build: .
+    ports:
+      - "8501:8501"
+    volumes:
+      # Data survives container rebuilds. This is the local stand-in for the
+      # Azure Files share the deployed version will eventually mount.
+      - finance-data:/data
+    environment:
+      FINANCE_DATA_DIR: /data
+    restart: unless-stopped
+
+volumes:
+  finance-data:

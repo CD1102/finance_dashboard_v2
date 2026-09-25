@@ -1,0 +1,53 @@
+{
+  "schema_version": 2,
+  "updated_at": "2026-09-25T00:00:00",
+  "goals": [
+    {
+      "id": "house_deposit",
+      "name": "House deposit",
+      "kind": "accumulation",
+      "target_amount": 60000.0,
+      "account_ids": [
+        "cash_isa",
+        "lifetime_isa"
+      ],
+      "target_date": "2029-06-01",
+      "description": "Deposit and fees for a first home.",
+      "monthly_contribution": null,
+      "manual_amount": null,
+      "spent": 0.0,
+      "active": true,
+      "sort_order": 0
+    },
+    {
+      "id": "emergency_fund",
+      "name": "Six months of spending",
+      "kind": "accumulation",
+      "target_amount": 13200.0,
+      "account_ids": [
+        "emergency_savings"
+      ],
+      "target_date": null,
+      "description": "Enough set aside to cover half a year without income.",
+      "monthly_contribution": null,
+      "manual_amount": null,
+      "spent": 0.0,
+      "active": true,
+      "sort_order": 1
+    },
+    {
+      "id": "quarter_million",
+      "name": "£250k net worth",
+      "kind": "net_worth",
+      "target_amount": 250000.0,
+      "account_ids": [],
+      "target_date": null,
+      "description": "A long run marker, no deadline attached.",
+      "monthly_contribution": null,
+      "manual_amount": null,
+      "spent": 0.0,
+      "active": true,
+      "sort_order": 2
+    }
+  ]
+}

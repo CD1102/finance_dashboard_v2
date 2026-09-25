@@ -1,0 +1,23 @@
+{
+  "schema_version": 2,
+  "updated_at": "2026-09-25T00:00:00",
+  "settings": {
+    "currency_symbol": "£",
+    "emergency_fund_months": 6.0,
+    "emergency_fund_target": null,
+    "spending_categories": [
+      "Housing",
+      "Bills & utilities",
+      "Food & groceries",
+      "Transport",
+      "Subscriptions",
+      "Shopping",
+      "Leisure",
+      "Giving",
+      "Other"
+    ],
+    "default_investment_return": 5.0,
+    "default_cash_rate": 3.0,
+    "default_inflation": 2.5
+  }
+}

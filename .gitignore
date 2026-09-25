@@ -1,0 +1,36 @@
+# Environments
+.venv/
+venv/
+env/
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+
+# Editor / OS
+.DS_Store
+Thumbs.db
+.idea/
+
+# Secrets
+.streamlit/secrets.toml
+.env
+
+# ---------------------------------------------------------------
+# Real personal financial data. Never commit anything in here.
+# Only the checked-in sample set under data/samples/ is public.
+# ---------------------------------------------------------------
+/data/*
+!/data/samples/
+!/data/samples/**
+!/data/.gitkeep
+
+# Local exports and backups
+/exports/
+/backups/
+*.xlsx
+*.xls
+!data/samples/*.xlsx

@@ -1,0 +1,812 @@
+{
+  "schema_version": 2,
+  "updated_at": "2026-09-25T00:00:00",
+  "months": [
+    {
+      "month": "2024-08",
+      "income": 3150.0,
+      "spending": 1993.03,
+      "spending_categories": {
+        "Housing": 600.3,
+        "Bills & utilities": 202.01,
+        "Food & groceries": 364.61,
+        "Transport": 211.22,
+        "Subscriptions": 58.6,
+        "Shopping": 219.49,
+        "Leisure": 251.03,
+        "Giving": 85.77
+      },
+      "contributions": {
+        "emergency_savings": 146.67,
+        "cash_isa": 300.18,
+        "stocks_isa": 448.16,
+        "lifetime_isa": 341.92,
+        "workplace_pension": 529.26
+      },
+      "balances": {
+        "current_account": 1790.78,
+        "emergency_savings": 5966.49,
+        "cash_isa": 9534.68,
+        "stocks_isa": 19190.72,
+        "lifetime_isa": 11769.07,
+        "workplace_pension": 21377.47,
+        "credit_card": 697.02
+      }
+    },
+    {
+      "month": "2024-09",
+      "income": 3150.0,
+      "spending": 2286.97,
+      "spending_categories": {
+        "Housing": 704.56,
+        "Bills & utilities": 253.53,
+        "Food & groceries": 363.81,
+        "Transport": 256.15,
+        "Subscriptions": 76.34,
+        "Shopping": 265.68,
+        "Leisure": 248.55,
+        "Giving": 118.36
+      },
+      "contributions": {
+        "emergency_savings": 152.56,
+        "cash_isa": 299.28,
+        "stocks_isa": 444.1,
+        "lifetime_isa": 336.32,
+        "workplace_pension": 518.76
+      },
+      "balances": {
+        "current_account": 902.79,
+        "emergency_savings": 6139.44,
+        "cash_isa": 9869.72,
+        "stocks_isa": 20027.03,
+        "lifetime_isa": 12200.17,
+        "workplace_pension": 21563.67,
+        "credit_card": 338.62
+      }
+    },
+    {
+      "month": "2024-10",
+      "income": 3150.0,
+      "spending": 2303.0,
+      "spending_categories": {
+        "Housing": 813.63,
+        "Bills & utilities": 249.56,
+        "Food & groceries": 354.33,
+        "Transport": 245.75,
+        "Subscriptions": 69.7,
+        "Shopping": 214.16,
+        "Leisure": 260.91,
+        "Giving": 94.95
+      },
+      "contributions": {
+        "emergency_savings": 153.76,
+        "cash_isa": 294.95,
+        "stocks_isa": 453.5,
+        "lifetime_isa": 341.74,
+        "workplace_pension": 516.19
+      },
+      "balances": {
+        "current_account": 350.0,
+        "emergency_savings": 6314.18,
+        "cash_isa": 10201.68,
+        "stocks_isa": 20747.83,
+        "lifetime_isa": 12178.55,
+        "workplace_pension": 22087.08,
+        "credit_card": 795.52
+      }
+    },
+    {
+      "month": "2024-11",
+      "income": 3150.0,
+      "spending": 2043.4,
+      "spending_categories": {
+        "Housing": 625.45,
+        "Bills & utilities": 202.69,
+        "Food & groceries": 367.04,
+        "Transport": 236.03,
+        "Subscriptions": 61.09,
+        "Shopping": 201.83,
+        "Leisure": 246.91,
+        "Giving": 102.37
+      },
+      "contributions": {
+        "emergency_savings": 151.39,
+        "cash_isa": 296.94,
+        "stocks_isa": 454.01,
+        "lifetime_isa": 326.95,
+        "workplace_pension": 524.79
+      },
+      "balances": {
+        "current_account": 350.0,
+        "emergency_savings": 6487.14,
+        "cash_isa": 10536.88,
+        "stocks_isa": 21166.09,
+        "lifetime_isa": 12542.78,
+        "workplace_pension": 22915.4,
+        "credit_card": 1033.13
+      }
+    },
+    {
+      "month": "2024-12",
+      "income": 3150.0,
+      "spending": 2641.34,
+      "spending_categories": {
+        "Housing": 784.63,
+        "Bills & utilities": 292.03,
+        "Food & groceries": 481.4,
+        "Transport": 271.85,
+        "Subscriptions": 86.87,
+        "Shopping": 262.13,
+        "Leisure": 317.19,
+        "Giving": 145.26
+      },
+      "contributions": {
+        "emergency_savings": 150.39,
+        "cash_isa": 292.61,
+        "stocks_isa": 452.25,
+        "lifetime_isa": 332.42,
+        "workplace_pension": 512.61
+      },
+      "balances": {
+        "current_account": 350.0,
+        "emergency_savings": 6659.69,
+        "cash_isa": 10869.0,
+        "stocks_isa": 21330.43,
+        "lifetime_isa": 12751.2,
+        "workplace_pension": 23869.53,
+        "credit_card": 674.93
+      }
+    },
+    {
+      "month": "2025-01",
+      "income": 3150.0,
+      "spending": 1891.79,
+      "spending_categories": {
+        "Housing": 660.82,
+        "Bills & utilities": 209.26,
+        "Food & groceries": 326.75,
+        "Transport": 167.49,
+        "Subscriptions": 49.4,
+        "Shopping": 189.08,
+        "Leisure": 206.12,
+        "Giving": 82.88
+      },
+      "contributions": {
+        "emergency_savings": 153.96,
+        "cash_isa": 303.42,
+        "stocks_isa": 439.17,
+        "lifetime_isa": 329.25,
+        "workplace_pension": 520.6
+      },
+      "balances": {
+        "current_account": 350.0,
+        "emergency_savings": 6836.4,
+        "cash_isa": 11213.18,
+        "stocks_isa": 20764.07,
+        "lifetime_isa": 13171.23,
+        "workplace_pension": 24313.56,
+        "credit_card": 693.32
+      }
+    },
+    {
+      "month": "2025-02",
+      "income": 3150.0,
+      "spending": 2054.39,
+      "spending_categories": {
+        "Housing": 727.01,
+        "Bills & utilities": 237.21,
+        "Food & groceries": 274.44,
+        "Transport": 200.43,
+        "Subscriptions": 55.21,
+        "Shopping": 214.55,
+        "Leisure": 240.2,
+        "Giving": 105.33
+      },
+      "contributions": {
+        "emergency_savings": 154.05,
+        "cash_isa": 292.96,
+        "stocks_isa": 444.91,
+        "lifetime_isa": 329.4,
+        "workplace_pension": 505.61
+      },
+      "balances": {
+        "current_account": 350.0,
+        "emergency_savings": 7013.81,
+        "cash_isa": 11548.19,
+        "stocks_isa": 21349.69,
+        "lifetime_isa": 13330.09,
+        "workplace_pension": 25417.12,
+        "credit_card": 660.42
+      }
+    },
+    {
+      "month": "2025-03",
+      "income": 3150.0,
+      "spending": 1984.66,
+      "spending_categories": {
+        "Housing": 699.52,
+        "Bills & utilities": 243.11,
+        "Food & groceries": 324.51,
+        "Transport": 168.12,
+        "Subscriptions": 50.56,
+        "Shopping": 186.1,
+        "Leisure": 217.73,
+        "Giving": 95.0
+      },
+      "contributions": {
+        "emergency_savings": 150.73,
+        "cash_isa": 306.8,
+        "stocks_isa": 437.69,
+        "lifetime_isa": 341.24,
+        "workplace_pension": 531.68
+      },
+      "balances": {
+        "current_account": 350.0,
+        "emergency_savings": 7188.5,
+        "cash_isa": 11898.3,
+        "stocks_isa": 22751.78,
+        "lifetime_isa": 13929.4,
+        "workplace_pension": 26175.27,
+        "credit_card": 1186.46
+      }
+    },
+    {
+      "month": "2025-04",
+      "income": 3300.85,
+      "spending": 2198.35,
+      "spending_categories": {
+        "Housing": 744.69,
+        "Bills & utilities": 243.85,
+        "Food & groceries": 386.97,
+        "Transport": 197.2,
+        "Subscriptions": 54.16,
+        "Shopping": 253.72,
+        "Leisure": 200.63,
+        "Giving": 117.12
+      },
+      "contributions": {
+        "emergency_savings": 148.65,
+        "cash_isa": 295.08,
+        "stocks_isa": 458.8,
+        "lifetime_isa": 325.02,
+        "workplace_pension": 506.8
+      },
+      "balances": {
+        "current_account": 350.0,
+        "emergency_savings": 7361.71,
+        "cash_isa": 12238.0,
+        "stocks_isa": 22269.76,
+        "lifetime_isa": 14216.35,
+        "workplace_pension": 27262.98,
+        "credit_card": 1171.64
+      }
+    },
+    {
+      "month": "2025-05",
+      "income": 3300.85,
+      "spending": 1983.21,
+      "spending_categories": {
+        "Housing": 604.26,
+        "Bills & utilities": 221.63,
+        "Food & groceries": 339.96,
+        "Transport": 191.08,
+        "Subscriptions": 58.4,
+        "Shopping": 232.95,
+        "Leisure": 220.02,
+        "Giving": 114.9
+      },
+      "contributions": {
+        "emergency_savings": 148.77,
+        "cash_isa": 296.13,
+        "stocks_isa": 451.75,
+        "lifetime_isa": 339.96,
+        "workplace_pension": 514.29
+      },
+      "balances": {
+        "current_account": 350.0,
+        "emergency_savings": 7535.63,
+        "cash_isa": 12580.02,
+        "stocks_isa": 23823.18,
+        "lifetime_isa": 15079.11,
+        "workplace_pension": 27042.61,
+        "credit_card": 499.81
+      }
+    },
+    {
+      "month": "2025-06",
+      "income": 3300.85,
+      "spending": 2309.99,
+      "spending_categories": {
+        "Housing": 654.71,
+        "Bills & utilities": 278.44,
+        "Food & groceries": 403.78,
+        "Transport": 252.49,
+        "Subscriptions": 56.91,
+        "Shopping": 268.99,
+        "Leisure": 272.09,
+        "Giving": 122.58
+      },
+      "contributions": {
+        "emergency_savings": 152.79,
+        "cash_isa": 300.04,
+        "stocks_isa": 442.46,
+        "lifetime_isa": 327.42,
+        "workplace_pension": 510.08
+      },
+      "balances": {
+        "current_account": 350.0,
+        "emergency_savings": 7714.17,
+        "cash_isa": 12927.24,
+        "stocks_isa": 24655.01,
+        "lifetime_isa": 14921.31,
+        "workplace_pension": 27417.93,
+        "credit_card": 374.1
+      }
+    },
+    {
+      "month": "2025-07",
+      "income": 3300.85,
+      "spending": 1919.23,
+      "spending_categories": {
+        "Housing": 642.75,
+        "Bills & utilities": 209.36,
+        "Food & groceries": 303.56,
+        "Transport": 179.84,
+        "Subscriptions": 65.2,
+        "Shopping": 194.02,
+        "Leisure": 234.45,
+        "Giving": 90.07
+      },
+      "contributions": {
+        "emergency_savings": 147.48,
+        "cash_isa": 308.14,
+        "stocks_isa": 443.09,
+        "lifetime_isa": 330.3,
+        "workplace_pension": 531.87
+      },
+      "balances": {
+        "current_account": 350.0,
+        "emergency_savings": 7888.01,
+        "cash_isa": 13283.86,
+        "stocks_isa": 25190.23,
+        "lifetime_isa": 15376.74,
+        "workplace_pension": 28918.53,
+        "credit_card": 316.95
+      }
+    },
+    {
+      "month": "2025-08",
+      "income": 3300.85,
+      "spending": 2108.0,
+      "spending_categories": {
+        "Housing": 753.53,
+        "Bills & utilities": 209.17,
+        "Food & groceries": 302.43,
+        "Transport": 205.97,
+        "Subscriptions": 61.65,
+        "Shopping": 231.56,
+        "Leisure": 226.12,
+        "Giving": 117.57
+      },
+      "contributions": {
+        "emergency_savings": 148.26,
+        "cash_isa": 298.65,
+        "stocks_isa": 449.14,
+        "lifetime_isa": 323.68,
+        "workplace_pension": 530.24
+      },
+      "balances": {
+        "current_account": 350.0,
+        "emergency_savings": 8063.22,
+        "cash_isa": 13632.32,
+        "stocks_isa": 26225.32,
+        "lifetime_isa": 15931.75,
+        "workplace_pension": 29872.0,
+        "credit_card": 588.46
+      }
+    },
+    {
+      "month": "2025-09",
+      "income": 3300.85,
+      "spending": 2143.46,
+      "spending_categories": {
+        "Housing": 703.03,
+        "Bills & utilities": 238.57,
+        "Food & groceries": 315.84,
+        "Transport": 235.44,
+        "Subscriptions": 69.4,
+        "Shopping": 259.24,
+        "Leisure": 225.69,
+        "Giving": 96.25
+      },
+      "contributions": {
+        "emergency_savings": 149.37,
+        "cash_isa": 296.65,
+        "stocks_isa": 451.95,
+        "lifetime_isa": 326.33,
+        "workplace_pension": 504.62
+      },
+      "balances": {
+        "current_account": 350.0,
+        "emergency_savings": 8240.14,
+        "cash_isa": 13980.09,
+        "stocks_isa": 27760.87,
+        "lifetime_isa": 16228.69,
+        "workplace_pension": 29591.06,
+        "credit_card": 706.36
+      }
+    },
+    {
+      "month": "2025-10",
+      "income": 3300.85,
+      "spending": 2181.56,
+      "spending_categories": {
+        "Housing": 777.46,
+        "Bills & utilities": 260.05,
+        "Food & groceries": 306.81,
+        "Transport": 185.29,
+        "Subscriptions": 71.17,
+        "Shopping": 204.81,
+        "Leisure": 255.9,
+        "Giving": 120.08
+      },
+      "contributions": {
+        "emergency_savings": 146.69,
+        "cash_isa": 292.12,
+        "stocks_isa": 460.69,
+        "lifetime_isa": 336.2,
+        "workplace_pension": 505.94
+      },
+      "balances": {
+        "current_account": 350.0,
+        "emergency_savings": 8414.98,
+        "cash_isa": 14324.64,
+        "stocks_isa": 28439.82,
+        "lifetime_isa": 17076.36,
+        "workplace_pension": 29991.92,
+        "credit_card": 1149.92
+      }
+    },
+    {
+      "month": "2025-11",
+      "income": 3300.85,
+      "spending": 1946.1,
+      "spending_categories": {
+        "Housing": 660.62,
+        "Bills & utilities": 209.45,
+        "Food & groceries": 284.56,
+        "Transport": 198.74,
+        "Subscriptions": 56.74,
+        "Shopping": 240.06,
+        "Leisure": 188.19,
+        "Giving": 107.74
+      },
+      "contributions": {
+        "emergency_savings": 149.24,
+        "cash_isa": 294.25,
+        "stocks_isa": 445.83,
+        "lifetime_isa": 336.23,
+        "workplace_pension": 529.95
+      },
+      "balances": {
+        "current_account": 350.0,
+        "emergency_savings": 8592.97,
+        "cash_isa": 14672.61,
+        "stocks_isa": 28369.13,
+        "lifetime_isa": 17788.81,
+        "workplace_pension": 30646.1,
+        "credit_card": 1218.74
+      }
+    },
+    {
+      "month": "2025-12",
+      "income": 3300.85,
+      "spending": 2718.56,
+      "spending_categories": {
+        "Housing": 996.43,
+        "Bills & utilities": 273.72,
+        "Food & groceries": 381.59,
+        "Transport": 258.71,
+        "Subscriptions": 83.14,
+        "Shopping": 285.78,
+        "Leisure": 305.16,
+        "Giving": 134.04
+      },
+      "contributions": {
+        "emergency_savings": 148.2,
+        "cash_isa": 307.4,
+        "stocks_isa": 438.33,
+        "lifetime_isa": 332.27,
+        "workplace_pension": 516.01
+      },
+      "balances": {
+        "current_account": 350.0,
+        "emergency_savings": 8770.53,
+        "cash_isa": 15035.03,
+        "stocks_isa": 28672.95,
+        "lifetime_isa": 18267.59,
+        "workplace_pension": 31639.7,
+        "credit_card": 318.38
+      }
+    },
+    {
+      "month": "2026-01",
+      "income": 3300.85,
+      "spending": 2318.73,
+      "spending_categories": {
+        "Housing": 720.27,
+        "Bills & utilities": 230.5,
+        "Food & groceries": 425.45,
+        "Transport": 225.8,
+        "Subscriptions": 81.81,
+        "Shopping": 250.94,
+        "Leisure": 269.24,
+        "Giving": 114.71
+      },
+      "contributions": {
+        "emergency_savings": 147.97,
+        "cash_isa": 296.28,
+        "stocks_isa": 452.21,
+        "lifetime_isa": 330.94,
+        "workplace_pension": 529.71
+      },
+      "balances": {
+        "current_account": 350.0,
+        "emergency_savings": 8948.47,
+        "cash_isa": 15387.69,
+        "stocks_isa": 29181.51,
+        "lifetime_isa": 18249.26,
+        "workplace_pension": 31650.11,
+        "credit_card": 453.41
+      }
+    },
+    {
+      "month": "2026-02",
+      "income": 3300.85,
+      "spending": 2367.91,
+      "spending_categories": {
+        "Housing": 763.59,
+        "Bills & utilities": 244.57,
+        "Food & groceries": 362.1,
+        "Transport": 249.21,
+        "Subscriptions": 81.29,
+        "Shopping": 269.14,
+        "Leisure": 290.01,
+        "Giving": 108.0
+      },
+      "contributions": {
+        "emergency_savings": 150.75,
+        "cash_isa": 304.11,
+        "stocks_isa": 448.3,
+        "lifetime_isa": 332.29,
+        "workplace_pension": 507.58
+      },
+      "balances": {
+        "current_account": 350.0,
+        "emergency_savings": 9129.79,
+        "cash_isa": 15749.5,
+        "stocks_isa": 28550.82,
+        "lifetime_isa": 17918.44,
+        "workplace_pension": 32199.05,
+        "credit_card": 1149.79
+      }
+    },
+    {
+      "month": "2026-03",
+      "income": 3300.85,
+      "spending": 2349.4,
+      "spending_categories": {
+        "Housing": 755.93,
+        "Bills & utilities": 264.66,
+        "Food & groceries": 351.16,
+        "Transport": 267.08,
+        "Subscriptions": 62.09,
+        "Shopping": 295.08,
+        "Leisure": 232.4,
+        "Giving": 121.0
+      },
+      "contributions": {
+        "emergency_savings": 150.85,
+        "cash_isa": 306.33,
+        "stocks_isa": 452.22,
+        "lifetime_isa": 325.07,
+        "workplace_pension": 515.78
+      },
+      "balances": {
+        "current_account": 350.0,
+        "emergency_savings": 9311.83,
+        "cash_isa": 16114.89,
+        "stocks_isa": 28713.11,
+        "lifetime_isa": 17724.51,
+        "workplace_pension": 32355.23,
+        "credit_card": 1102.66
+      }
+    },
+    {
+      "month": "2026-04",
+      "income": 3478.38,
+      "spending": 2502.65,
+      "spending_categories": {
+        "Housing": 867.77,
+        "Bills & utilities": 290.14,
+        "Food & groceries": 403.97,
+        "Transport": 241.73,
+        "Subscriptions": 78.68,
+        "Shopping": 266.73,
+        "Leisure": 223.16,
+        "Giving": 130.48
+      },
+      "contributions": {
+        "emergency_savings": 145.56,
+        "cash_isa": 294.3,
+        "stocks_isa": 457.29,
+        "lifetime_isa": 327.04,
+        "workplace_pension": 510.09
+      },
+      "balances": {
+        "current_account": 350.0,
+        "emergency_savings": 9489.21,
+        "cash_isa": 16469.62,
+        "stocks_isa": 30056.88,
+        "lifetime_isa": 18274.64,
+        "workplace_pension": 31633.65,
+        "credit_card": 973.01
+      }
+    },
+    {
+      "month": "2026-05",
+      "income": 3478.38,
+      "spending": 2462.36,
+      "spending_categories": {
+        "Housing": 760.8,
+        "Bills & utilities": 255.34,
+        "Food & groceries": 422.28,
+        "Transport": 256.15,
+        "Subscriptions": 67.24,
+        "Shopping": 317.44,
+        "Leisure": 271.12,
+        "Giving": 112.0
+      },
+      "contributions": {
+        "emergency_savings": 149.06,
+        "cash_isa": 305.71,
+        "stocks_isa": 451.88,
+        "lifetime_isa": 327.38,
+        "workplace_pension": 514.05
+      },
+      "balances": {
+        "current_account": 350.0,
+        "emergency_savings": 9670.69,
+        "cash_isa": 16837.09,
+        "stocks_isa": 30726.19,
+        "lifetime_isa": 18482.52,
+        "workplace_pension": 32403.48,
+        "credit_card": 843.37
+      }
+    },
+    {
+      "month": "2026-06",
+      "income": 3478.38,
+      "spending": 2556.24,
+      "spending_categories": {
+        "Housing": 842.49,
+        "Bills & utilities": 253.4,
+        "Food & groceries": 410.72,
+        "Transport": 265.75,
+        "Subscriptions": 67.32,
+        "Shopping": 278.63,
+        "Leisure": 305.05,
+        "Giving": 132.88
+      },
+      "contributions": {
+        "emergency_savings": 148.06,
+        "cash_isa": 297.75,
+        "stocks_isa": 445.56,
+        "lifetime_isa": 337.43,
+        "workplace_pension": 507.24
+      },
+      "balances": {
+        "current_account": 350.0,
+        "emergency_savings": 9851.79,
+        "cash_isa": 17197.98,
+        "stocks_isa": 32243.99,
+        "lifetime_isa": 18722.46,
+        "workplace_pension": 34391.74,
+        "credit_card": 412.69
+      }
+    },
+    {
+      "month": "2026-07",
+      "income": 3478.38,
+      "spending": 2106.17,
+      "spending_categories": {
+        "Housing": 738.93,
+        "Bills & utilities": 206.03,
+        "Food & groceries": 370.79,
+        "Transport": 210.29,
+        "Subscriptions": 65.39,
+        "Shopping": 204.87,
+        "Leisure": 197.8,
+        "Giving": 112.07
+      },
+      "contributions": {
+        "emergency_savings": 151.71,
+        "cash_isa": 307.82,
+        "stocks_isa": 456.13,
+        "lifetime_isa": 326.93,
+        "workplace_pension": 535.37
+      },
+      "balances": {
+        "current_account": 350.0,
+        "emergency_savings": 10037.16,
+        "cash_isa": 17570.29,
+        "stocks_isa": 32582.05,
+        "lifetime_isa": 19150.14,
+        "workplace_pension": 35361.12,
+        "credit_card": 495.34
+      }
+    },
+    {
+      "month": "2026-08",
+      "income": 3478.38,
+      "spending": 2409.93,
+      "spending_categories": {
+        "Housing": 735.67,
+        "Bills & utilities": 288.53,
+        "Food & groceries": 413.6,
+        "Transport": 259.96,
+        "Subscriptions": 65.24,
+        "Shopping": 282.03,
+        "Leisure": 246.51,
+        "Giving": 118.4
+      },
+      "contributions": {
+        "emergency_savings": 152.55,
+        "cash_isa": 308.54,
+        "stocks_isa": 445.08,
+        "lifetime_isa": 332.31,
+        "workplace_pension": 516.57
+      },
+      "balances": {
+        "current_account": 350.0,
+        "emergency_savings": 10224.0,
+        "cash_isa": 17944.72,
+        "stocks_isa": 33286.39,
+        "lifetime_isa": 20365.46,
+        "workplace_pension": 36152.04,
+        "credit_card": 778.5
+      }
+    },
+    {
+      "month": "2026-09",
+      "income": 3478.38,
+      "spending": 2382.68,
+      "spending_categories": {
+        "Housing": 856.94,
+        "Bills & utilities": 254.85,
+        "Food & groceries": 339.62,
+        "Transport": 210.1,
+        "Subscriptions": 68.22,
+        "Shopping": 251.71,
+        "Leisure": 287.8,
+        "Giving": 113.44
+      },
+      "contributions": {
+        "emergency_savings": 149.9,
+        "cash_isa": 299.88,
+        "stocks_isa": 461.38,
+        "lifetime_isa": 326.19,
+        "workplace_pension": 526.17
+      },
+      "balances": {
+        "current_account": 350.0,
+        "emergency_savings": 10408.83,
+        "cash_isa": 18311.89,
+        "stocks_isa": 34487.43,
+        "lifetime_isa": 21076.55,
+        "workplace_pension": 36552.21,
+        "credit_card": 355.9
+      }
+    }
+  ]
+}
