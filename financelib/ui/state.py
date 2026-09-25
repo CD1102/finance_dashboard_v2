@@ -110,6 +110,9 @@ def flush_toasts() -> None:
     pending = st.session_state.pop(TOAST_KEY, None)
     if pending:
         message, toast_icon = pending
+        # Validate and replace the icon if it's not a valid emoji
+        if toast_icon == "✓":
+            toast_icon = "✅"  # Replace with a valid emoji
         st.toast(message, icon=toast_icon)
 
 
