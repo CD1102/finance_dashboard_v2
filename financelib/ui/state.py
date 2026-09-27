@@ -8,6 +8,8 @@ reads fast without ever showing a stale figure after a save.
 
 from __future__ import annotations
 
+import hashlib
+from pathlib import Path
 from typing import Callable
 
 import streamlit as st
@@ -47,9 +49,28 @@ def mark_changed(message: str | None = None, icon: str = "✓") -> None:
         st.session_state[TOAST_KEY] = (message, icon)
 
 
+def data_fingerprint(location: str | Path | None = None) -> str:
+    """Stable hash of the data files on disk.
+
+    This keeps cached loads in step with real file contents, so a refresh or a
+    second browser tab cannot keep showing stale data after a save or delete in
+    another session.
+    """
+    base = Path(location) if location is not None else resolve_data_dir()
+    digest = hashlib.sha256()
+    for filename in ("accounts.json", "months.json", "goals.json", "settings.json"):
+        path = base / filename
+        digest.update(filename.encode("utf-8"))
+        if path.exists():
+            digest.update(path.read_bytes())
+        else:
+            digest.update(b"<missing>")
+    return digest.hexdigest()
+
+
 @st.cache_data(show_spinner=False)
-def _load_cached(version: int, location: str) -> Dataset:
-    """``location`` is part of the cache key, not just documentation."""
+def _load_cached(version: int, location: str, fingerprint: str) -> Dataset:
+    """The cache key includes both the session version and a file fingerprint."""
     return get_repository(location).load()
 
 
@@ -59,8 +80,9 @@ def load_dataset() -> Dataset:
     A storage failure is reported once, prominently, and the app stops rather
     than continuing with data it could not read.
     """
+    location = str(resolve_data_dir())
     try:
-        return _load_cached(data_version(), str(resolve_data_dir()))
+        return _load_cached(data_version(), location, data_fingerprint(location))
     except StorageError as exc:
         st.error(str(exc), icon="⚠")
         with st.expander("What to do about this"):

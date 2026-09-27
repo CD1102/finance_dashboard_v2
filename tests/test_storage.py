@@ -180,6 +180,20 @@ class TestMergeRecords:
         assert merged.spending == 80
         assert merged.balances == {"isa": 5}
 
+
+class TestUiState:
+    def test_data_fingerprint_changes_when_source_files_change(self, tmp_path):
+        from financelib.ui.state import data_fingerprint
+
+        accounts = tmp_path / "accounts.json"
+        accounts.write_text('{"schema_version": 2, "accounts": [{"id": "cash"}]}', encoding="utf-8")
+        first = data_fingerprint(str(tmp_path))
+
+        accounts.write_text('{"schema_version": 2, "accounts": []}', encoding="utf-8")
+        second = data_fingerprint(str(tmp_path))
+
+        assert first != second
+
     def test_supplied_values_win(self):
         merged = merge_records(
             MonthlyRecord(month="2026-01", income=100),
