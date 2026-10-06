@@ -3,6 +3,7 @@ targetScope = 'subscription'
 param location string = 'uksouth'
 param resourceGroupName string = 'finance-dashboard-rg'
 param registryName string = 'financedashboardacr'
+param containerImage string
 
 resource rg 'Microsoft.Resources/resourceGroups@2025-04-01' = {
   name: resourceGroupName
@@ -15,5 +16,8 @@ module resources './resources.bicep' = {
   params: {
     registryName: registryName
     location: location
+    containerImage: containerImage
+
   }
 }
+
