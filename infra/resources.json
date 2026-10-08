@@ -1,0 +1,173 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "metadata": {
+    "_generator": {
+      "name": "bicep",
+      "version": "0.47.16.16243",
+      "templateHash": "1537463846561634999"
+    }
+  },
+  "parameters": {
+    "registryName": {
+      "type": "string"
+    },
+    "location": {
+      "type": "string"
+    },
+    "containerImage": {
+      "type": "string"
+    }
+  },
+  "resources": [
+    {
+      "type": "Microsoft.ContainerRegistry/registries",
+      "apiVersion": "2025-11-01",
+      "name": "[parameters('registryName')]",
+      "location": "[parameters('location')]",
+      "sku": {
+        "name": "Basic"
+      }
+    },
+    {
+      "type": "Microsoft.App/managedEnvironments",
+      "apiVersion": "2025-01-01",
+      "name": "finance-dashboard-env",
+      "location": "[parameters('location')]",
+      "properties": {
+        "vnetConfiguration": {}
+      }
+    },
+    {
+      "type": "Microsoft.ManagedIdentity/userAssignedIdentities",
+      "apiVersion": "2023-01-31",
+      "name": "finance-dashboard-app",
+      "location": "[parameters('location')]"
+    },
+    {
+      "type": "Microsoft.Authorization/roleAssignments",
+      "apiVersion": "2022-04-01",
+      "scope": "[resourceId('Microsoft.ContainerRegistry/registries', parameters('registryName'))]",
+      "name": "[guid(resourceId('Microsoft.ContainerRegistry/registries', parameters('registryName')), resourceId('Microsoft.ManagedIdentity/userAssignedIdentities', 'finance-dashboard-app'), 'AcrPull')]",
+      "properties": {
+        "principalId": "[reference(resourceId('Microsoft.ManagedIdentity/userAssignedIdentities', 'finance-dashboard-app'), '2023-01-31').principalId]",
+        "principalType": "ServicePrincipal",
+        "roleDefinitionId": "[subscriptionResourceId('Microsoft.Authorization/roleDefinitions', '7f951dda-4ed3-4680-a7ca-43fe172d538d')]"
+      },
+      "dependsOn": [
+        "[resourceId('Microsoft.ContainerRegistry/registries', parameters('registryName'))]",
+        "[resourceId('Microsoft.ManagedIdentity/userAssignedIdentities', 'finance-dashboard-app')]"
+      ]
+    },
+    {
+      "type": "Microsoft.Storage/storageAccounts",
+      "apiVersion": "2025-06-01",
+      "name": "financedashboarddata",
+      "location": "[parameters('location')]",
+      "kind": "StorageV2",
+      "sku": {
+        "name": "Standard_LRS"
+      }
+    },
+    {
+      "type": "Microsoft.Storage/storageAccounts/fileServices",
+      "apiVersion": "2025-06-01",
+      "name": "[format('{0}/{1}', 'financedashboarddata', 'default')]",
+      "dependsOn": [
+        "[resourceId('Microsoft.Storage/storageAccounts', 'financedashboarddata')]"
+      ]
+    },
+    {
+      "type": "Microsoft.Storage/storageAccounts/fileServices/shares",
+      "apiVersion": "2025-06-01",
+      "name": "[format('{0}/{1}/{2}', 'financedashboarddata', 'default', 'finance-data')]",
+      "properties": {
+        "accessTier": "Cool",
+        "enabledProtocols": "SMB",
+        "shareQuota": 1
+      },
+      "dependsOn": [
+        "[resourceId('Microsoft.Storage/storageAccounts/fileServices', 'financedashboarddata', 'default')]"
+      ]
+    },
+    {
+      "type": "Microsoft.App/managedEnvironments/storages",
+      "apiVersion": "2026-01-01",
+      "name": "[format('{0}/{1}', 'finance-dashboard-env', 'finance-data')]",
+      "properties": {
+        "azureFile": {
+          "accessMode": "ReadWrite",
+          "accountName": "financedashboarddata",
+          "accountKey": "[listKeys(resourceId('Microsoft.Storage/storageAccounts', 'financedashboarddata'), '2025-06-01').keys[0].value]",
+          "shareName": "finance-data"
+        }
+      },
+      "dependsOn": [
+        "[resourceId('Microsoft.App/managedEnvironments', 'finance-dashboard-env')]",
+        "[resourceId('Microsoft.Storage/storageAccounts/fileServices/shares', 'financedashboarddata', 'default', 'finance-data')]",
+        "[resourceId('Microsoft.Storage/storageAccounts', 'financedashboarddata')]"
+      ]
+    },
+    {
+      "type": "Microsoft.App/containerApps",
+      "apiVersion": "2025-07-01",
+      "name": "finance-dashboard",
+      "location": "[parameters('location')]",
+      "identity": {
+        "type": "UserAssigned",
+        "userAssignedIdentities": {
+          "[format('{0}', resourceId('Microsoft.ManagedIdentity/userAssignedIdentities', 'finance-dashboard-app'))]": {}
+        }
+      },
+      "properties": {
+        "managedEnvironmentId": "[resourceId('Microsoft.App/managedEnvironments', 'finance-dashboard-env')]",
+        "configuration": {
+          "ingress": {
+            "external": true,
+            "targetPort": 8501,
+            "transport": "auto"
+          },
+          "registries": [
+            {
+              "server": "[format('{0}.azurecr.io', parameters('registryName'))]",
+              "identity": "[resourceId('Microsoft.ManagedIdentity/userAssignedIdentities', 'finance-dashboard-app')]"
+            }
+          ]
+        },
+        "template": {
+          "containers": [
+            {
+              "name": "finance-dashboard",
+              "image": "[parameters('containerImage')]",
+              "resources": {
+                "cpu": "0.5",
+                "memory": "1Gi"
+              },
+              "volumeMounts": [
+                {
+                  "volumeName": "finance-data-volume",
+                  "mountPath": "/data"
+                }
+              ]
+            }
+          ],
+          "volumes": [
+            {
+              "name": "finance-data-volume",
+              "storageType": "AzureFile",
+              "storageName": "finance-data"
+            }
+          ],
+          "scale": {
+            "minReplicas": 0,
+            "maxReplicas": 1
+          }
+        }
+      },
+      "dependsOn": [
+        "[resourceId('Microsoft.ManagedIdentity/userAssignedIdentities', 'finance-dashboard-app')]",
+        "[resourceId('Microsoft.App/managedEnvironments', 'finance-dashboard-env')]"
+      ]
+    }
+  ]
+}
