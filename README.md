@@ -413,3 +413,7 @@ The current platform demonstrates:
 - Persistent Azure Files storage
 - Application logging
 - Azure cost management
+
+## Deployment status
+
+Deployed to Azure using automated GitHub Actions CI/CD.
