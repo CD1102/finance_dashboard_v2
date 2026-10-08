@@ -79,6 +79,10 @@ resource containerApp 'Microsoft.App/containerApps@2025-07-01' = {
   name: 'finance-dashboard'
   location: location
 
+  dependsOn: [
+    environmentStorage
+  ]
+
   identity: {
     type: 'UserAssigned'
     userAssignedIdentities: {
