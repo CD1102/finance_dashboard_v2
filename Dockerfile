@@ -18,6 +18,7 @@ COPY app.py ./
 COPY financelib ./financelib
 COPY views ./views
 COPY .streamlit ./.streamlit
+COPY start.sh ./start.sh
 COPY data/samples ./data/samples
 
 # Run as a non-root user. Azure Container Apps does not require it, but an
@@ -44,4 +45,4 @@ ENV STREAMLIT_SERVER_PORT=8501 \
 HEALTHCHECK --interval=30s --timeout=5s --start-period=20s --retries=3 \
     CMD python -c "import urllib.request,sys; sys.exit(0 if urllib.request.urlopen('http://localhost:8501/_stcore/health', timeout=4).status==200 else 1)"
 
-CMD ["streamlit", "run", "app.py"]
+CMD ["sh", "/app/start.sh"]

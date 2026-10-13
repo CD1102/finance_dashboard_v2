@@ -43,10 +43,15 @@ jobs:
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         run: docker push financedashboardacr.azurecr.io/finance-dashboard:${{ github.sha }}
 
-      - name: Deploy infrastructure
+      - name: Deploy container app
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         run: |
-          az deployment sub create \
-            --location uksouth \
-            --template-file ./infra/main.bicep \
-            --parameters containerImage=financedashboardacr.azurecr.io/finance-dashboard:${{ github.sha }}
+          az containerapp update \
+            --name finance-dashboard \
+            --resource-group finance-dashboard-rg \
+            --image financedashboardacr.azurecr.io/finance-dashboard:${{ github.sha }} \
+            --set-env-vars \
+              AUTH0_CLIENT_ID=secretref:auth0-client-id \
+              AUTH0_CLIENT_SECRET=secretref:auth0-client-secret \
+              STREAMLIT_COOKIE_SECRET=secretref:streamlit-cookie-secret \
+              AUTH0_ALLOWED_SUB=secretref:auth0-allowed-sub

@@ -8,6 +8,25 @@ from __future__ import annotations
 
 import streamlit as st
 
+# Require authentication before loading the dashboard or financial data.
+if not st.user.is_logged_in:
+    st.title("Finance Dashboard")
+    st.write("Please sign in to access your dashboard.")
+    st.button("Log in", on_click=st.login, args=("auth0",))
+    st.stop()
+
+# Restrict this single-user dashboard to the configured Auth0 identity.
+allowed_sub = st.secrets["auth"]["allowed_sub"]
+
+if st.user.sub != allowed_sub:
+    st.error("This account is not authorised to access this dashboard.")
+    st.button("Log out", on_click=st.logout)
+    st.stop()
+
+# Show logout only to the authorised user.
+with st.sidebar:
+    st.button("Log out", on_click=st.logout)
+
 from financelib.calculations import networth
 from financelib.formatting import money, month_label, signed_money
 from financelib.storage import StorageError
